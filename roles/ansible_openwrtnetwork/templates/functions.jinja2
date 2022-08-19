@@ -286,4 +286,7 @@ config interface "{{ key }}"
 {% endif %}
 {% endif %}
 {% endfor %}
+{% if value['ipv6'] is defined %}
+        option ipv6 "{{ value['ipv6'] }}"
+{% endif %}
 {% endmacro %}
